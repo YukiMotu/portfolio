@@ -1,0 +1,191 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug"
+import TimeLineElement from "../components/cv/TimeLine.astro";
+import TimeLineElement2 from "../components/cv/TimeLine.astro";
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const last_posts = posts.slice(0, 3);
+---
+<!-- Oder: Amar, Store: Projects, Projects: Blogs, Blogs: My Thoughts -->
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hey there 👋</div>
+    <div class="text-5xl font-bold">I'm Mizbaul Haque Maruf</div>
+    <div class="text-3xl py-3 font-bold">Software Engineer and AI Researcher</div>
+    <div class="py-2">
+      <!-- <text class="text-lg">
+        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
+        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
+        it useful!
+      </text> -->
+    </div>
+
+
+    <div class="mb-10 text-justify">
+      <div class="text-xl w-full font-bold">Open to:</div> 
+        <li>Backend Development using Go </li>
+        <li>Data Engineering and Machine Learning Engineering with AWS </li>
+        <li>Machine Learning, Deep Learning and Generative AI Research </li>
+    </div>
+
+    <div class="mb-10 text-justify">
+      <div class="text-xl w-full font-bold">Research Interests:</div> 
+        <li>Computer Vision</li>
+      <li>TinyML</li>
+      <li>Large Language Models/ Vision Language Models/ RAG </li>
+    </div>
+
+
+    <div class="mt-8">
+      <a class="btn" href="https://linkedin.com/in/mizbaulhaquemaruf" target="_blank"> Let's connect!</a>
+      <!-- <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
+        Get This template
+      </a> -->
+    </div>
+  </div>
+
+  <!-- <div>
+    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+  </div>
+
+  <HorizontalCard
+    title="Demo Project 1"
+    img="/post_img.webp"
+    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    url="#"
+    badge="NEW"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Demo Project 2"
+    img="/post_img.webp"
+    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    url="#"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Demo Project 3"
+    img="/post_img.webp"
+    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    url="#"
+    badge="FOSS"
+  />
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+  </div>
+
+  {
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/blog/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  } -->
+
+
+
+
+
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+
+  <!-- <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div> -->
+
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement2
+      title="B.Sc in Software Engineering at Islamic University of Technology"
+      subtitle="CGPA: 3.77/4.00 (June 2021 - July 2025)"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement2
+      title="Associate Software Engineer at Vivasoft Limited"
+      subtitle="June 2024 – September 2024 at Banani, Dhaka, Bangladesh."
+    >
+    • Developed and replaced GPT 4o based AI Image Search module with Vision Transformer based self-hosted model of
+    an Indonesian e-commerce. <br>
+    • Built a Shopify plugin chat-bot for product recommendation using GPT-3.5, Langchain, FastAPI, Pinecone
+    Vector DB.
+    </TimeLineElement>
+    <TimeLineElement2
+      title="Software Developer Intern at OpenGenus Foundation" 
+      subtitle="June 2023 – August 2023 (Remote from Dhaka) Company based in Japan."
+    >
+    • Authored and published 10+ technical articles on web development, data structures, algorithms, and core UX
+    principles. <br>
+    • Developed a virtual keyboard with HTML, CSS and JavaScript, complete with comprehensive documentation and
+    open-source source code.
+    </TimeLineElement>
+    <TimeLineElement2
+      title="Beta Microsoft Learn Student Ambassador"
+      subtitle="July 2022 - September 2023 in Bangladesh."
+    >
+    • Hosted and organized educational workshops focused on web development and delivered engaging presentations
+particularly on HTML, CSS, JavaScript, Git, GitHub, Django, Azure, and Python.
+    </TimeLineElement>
+  </div>
+
+  <!-- <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="#" target="_blank"> Certification Name (with link)</a>
+    </li>
+    <li>
+      <a href="#" target="_blank"> Certification Name (with link)</a>
+    </li>
+  </ul> -->
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>Go</li>
+    <li>Python</li>
+    <li>JavaScript</li>
+    <li>Node JS</li>
+    <li>Express</li>
+    <li>React (basics)</li>
+    <li>MongoDB</li>
+    <li>PostgreSQL</li>
+    <li>MySQL</li>
+    <li>PinceCone Vector DB</li>
+    <li>Version Control: Git & GitHub</li>
+    <li>Deep Learning</li>
+    <li>PyTorch</li>
+    <li>Numpy</li>
+    <li>Pandas</li>
+  </ul>
+
+  
+</BaseLayout>
