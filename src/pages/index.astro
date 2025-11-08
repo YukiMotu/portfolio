@@ -5,6 +5,7 @@ import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 import TimeLineElement from "../components/cv/TimeLine.astro";
 import TimeLineElement2 from "../components/cv/TimeLine.astro";
+import Analytics from '@vercel/analytics/astro'
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -28,7 +29,7 @@ const last_posts = posts.slice(0, 3);
 
     <div class="mb-10 text-justify">
       <div class="text-xl w-full font-bold">Open to:</div> 
-        <li>Backend Development using Go </li>
+        <li>AI Engineering and Backend Development</li>
         <li>Data Engineering and Machine Learning Engineering with AWS </li>
         <li>Machine Learning, Deep Learning and Generative AI Research </li>
     </div>
@@ -49,35 +50,38 @@ const last_posts = posts.slice(0, 3);
     </div>
   </div>
 
-  <!-- <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Latest Updates</div>
   </div>
 
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
+  <div class="mb-10">
+    <div class="time-line-container">
+      <TimeLineElement
+        title="Research Paper Accepted at DASA'25"
+        subtitle="October 2025"
+      >
+
+        Our work on federated learning for Alzheimer's detection will be presented at the International Conference on Decision Aid Sciences and Applications.
+      </TimeLineElement>
+
+      <TimeLineElement
+        title="Started as Software Engineer L-1 at Vivasoft Limited"
+        subtitle="October 2025"
+      >
+        Working on Bangla Speech/Audio Models. Excited to contribute to innovative something special!
+      </TimeLineElement>
+
+      <TimeLineElement
+        title="Completed B.Sc in Software Engineering"
+        subtitle="September 2025"
+      >
+        Graduated from Islamic University of Technology with CGPA 3.80/4.00. Miss my friends already.
+      </TimeLineElement>
+    </div>
+  </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from My Diary</div>
   </div>
 
   {
@@ -94,98 +98,10 @@ const last_posts = posts.slice(0, 3);
         <div class="divider my-0" />
       </>
     ))
-  } -->
+  }
 
 
 
-
-
-
-
-<!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
-
-  <!-- <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
-  </div> -->
-
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
-  </div>
-
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement2
-      title="B.Sc in Software Engineering at Islamic University of Technology"
-      subtitle="CGPA: 3.77/4.00 (June 2021 - July 2025)"
-    />
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
-  </div>
-
-  <div class="time-line-container mb-10">
-    <TimeLineElement2
-      title="Associate Software Engineer at Vivasoft Limited"
-      subtitle="June 2024 – September 2024 at Banani, Dhaka, Bangladesh."
-    >
-    • Developed and replaced GPT 4o based AI Image Search module with Vision Transformer based self-hosted model of
-    an Indonesian e-commerce. <br>
-    • Built a Shopify plugin chat-bot for product recommendation using GPT-3.5, Langchain, FastAPI, Pinecone
-    Vector DB.
-    </TimeLineElement>
-    <TimeLineElement2
-      title="Software Developer Intern at OpenGenus Foundation" 
-      subtitle="June 2023 – August 2023 (Remote from Dhaka) Company based in Japan."
-    >
-    • Authored and published 10+ technical articles on web development, data structures, algorithms, and core UX
-    principles. <br>
-    • Developed a virtual keyboard with HTML, CSS and JavaScript, complete with comprehensive documentation and
-    open-source source code.
-    </TimeLineElement>
-    <TimeLineElement2
-      title="Beta Microsoft Learn Student Ambassador"
-      subtitle="July 2022 - September 2023 in Bangladesh."
-    >
-    • Hosted and organized educational workshops focused on web development and delivered engaging presentations
-particularly on HTML, CSS, JavaScript, Git, GitHub, Django, Azure, and Python.
-    </TimeLineElement>
-  </div>
-
-  <!-- <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-  </ul> -->
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
-  </div>
-
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Go</li>
-    <li>Python</li>
-    <li>JavaScript</li>
-    <li>Node JS</li>
-    <li>Express</li>
-    <li>React (basics)</li>
-    <li>MongoDB</li>
-    <li>PostgreSQL</li>
-    <li>MySQL</li>
-    <li>PinceCone Vector DB</li>
-    <li>Version Control: Git & GitHub</li>
-    <li>Deep Learning</li>
-    <li>PyTorch</li>
-    <li>Numpy</li>
-    <li>Pandas</li>
-  </ul>
 
   
 </BaseLayout>

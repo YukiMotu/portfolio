@@ -5,88 +5,186 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
-  </div>
-
-  <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </div>
-
-  <div class="mb-5">
     <div class="text-3xl w-full font-bold">Education</div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+      title="B.Sc in Software Engineering, Department of CSE"
+      subtitle="June 2021 to September 2025 at Islamic University of Technology - CGPA: 3.80/4.00"
     />
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
+    <div class="text-3xl w-full font-bold">Work Experience</div>
   </div>
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Software Engineer L-1"
+      subtitle="October 2025 to Present at <span class='font-bold text-red-900 dark:text-red-600'>Vivasoft Limited</span>, Banani, Dhaka"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class="list-disc ml-4">
+        <li>Built and trained a custom Bangla Text-to-Speech (TTS) model with an in-house curated dataset.</li>
+        <li>Reduced training time of the in-house model by optimizing performance with CUDA programming.</li>
+      </ul>
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Associate Software Engineer"
+      subtitle="June 2024 to September 2024 at <span class='font-bold text-red-900 dark:text-red-600'>Vivasoft Limited</span>, Banani, Dhaka"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class="list-disc ml-4">
+        <li>Developed and replaced GPT 4o based AI Image Search module with Vision Transformer based self-hosted model of an Indonesian e-commerce.</li>
+        <li>Built a Shopify plugin chat-bot for product recommendation using GPT-3.5, Langchain, FastAPI, Pinecone Vector DB.</li>
+      </ul>
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Software Developer Intern"
+      subtitle="April 2024 to May 2024 at <span class='font-bold text-red-900 dark:text-red-600'>Itransition Group</span>, Remote"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class="list-disc ml-4">
+        <li>Developed and deployed five applications using Ruby on Rails framework with secure authentication.</li>
+        <li>Designed responsive and user-friendly frontend interfaces using Bootstrap framework.</li>
+      </ul>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Software Developer Intern"
+      subtitle="June 2023 to August 2023 at <span class='font-bold text-red-900 dark:text-red-600'>OpenGenus Foundation</span>, Remote"
+    >
+      <ul class="list-disc ml-4">
+        <li>Authored and published 10+ technical articles on web development, data structures, algorithms, and core UX principles. (<a href="#" class="text-blue-600 hover:underline">Link</a>)</li>
+        <li>Developed a virtual keyboard with HTML, CSS and JavaScript, complete with comprehensive documentation and open-source source code. (<a href="#" class="text-blue-600 hover:underline">Link</a>)</li>
+      </ul>
     </TimeLineElement>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
+    <div class="text-3xl w-full font-bold">Research Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Research Intern"
+      subtitle="March 2025 to Present at <span class='font-bold text-red-900 dark:text-red-600'>Advanced Machine Intelligence Research Lab</span>, Remote"
+    >
+      <ul class="list-disc ml-4">
+        <li>Implemented federated learning and applied model pruning and quantization to improve efficiency and privacy in distributed training.</li>
+        <li>Developed a lightweight classification model using depthwise convolutional networks, maintaining high accuracy for complex classification tasks.</li>
+        <li>Enhanced skin cancer classification performance using ensemble techniques.</li>
+      </ul>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Bachelor's Thesis"
+      subtitle="October 2024 to Present at <span class='font-bold text-red-900 dark:text-red-600'>Islamic University of Technology</span>"
+    >
+      <div class="mb-2"><strong>Title:</strong> Squeeze-Aware YOLO: An improved YOLO for Traffic Sign Detection</div>
+      <ul class="list-disc ml-4">
+        <li>Developed a lightweight novel object detection model based on YOLOv10, surpassing state-of-the-art models for traffic sign detection.</li>
+        <li>Implemented and fine-tuned detection architectures for efficient real-time deployment.</li>
+        <li>Enhanced and expanded an existing dataset of Bangladeshi traffic signs to improve model robustness and accuracy.</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Publications</div>
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
     <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
+      <strong>PruneFedAD: Federated Learning with Structured Pruning for Low-Resource Alzheimer's Disease Detection</strong><br/>
+      <em>2025 International Conference on Decision Aid Sciences and Applications (DASA'25)</em>
     </li>
     <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
+      <strong>LeafLiteNet: A Computationally Frugal Interpretable Neural Architecture Under Controlled and Uncontrolled Environmental Conditions</strong><br/>
+      <em>Neural Computing and Applications (Springer), 2025. (Under Review)</em>
+    </li>
+    <li>
+      <strong>A Survey to Understand the experience of ChatGPT Usage among Engineering University Students in Bangladesh</strong><br/>
+      <em>Technium: Romanian Journal of Applied Sciences and Technology (ISSN: 2668-778X), 2023</em>
     </li>
   </ul>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
+    <div class="text-3xl w-full font-bold">Achievements</div>
   </div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>2nd Runner Up: Streamstech presents IUT ICT Fest 2024 Code Catalyst: Refactoring Contest</li>
+    <li>Awarded AWS AI & ML Scholarship out of thousands of applicants across the world.</li>
+    <li>Winner at ML Olympiad: Tensorflow User Group Bangladesh by Google.</li>
+    <li>Placed one of top 5 teams in CodeRush 1.0 Hackathon.</li>
+    <li>Secured a place in top 50 of the Huawei Seeds For The Future 2024, Bangladesh.</li>
   </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Extracurricular Activities</div>
+  </div>
+
+  <div class="mb-8">
+    <div class="text-xl font-semibold mb-2">Microsoft Learn Student Ambassadors</div>
+    <ul class="list-disc mx-6 grid gap-2">
+      <li>Hosted and organized educational workshops focused on web development and delivered engaging presentations particularly on HTML, CSS, JavaScript, Git, GitHub, Django, Azure, and Python.</li>
+    </ul>
+  </div>
+
+  <div class="mb-10">
+    <div class="text-xl font-semibold mb-2">Talks and sessions</div>
+    <div class="mb-4">
+      <div class="font-semibold ml-6">AI Adda at Vivasoft Limited</div>
+      <ul class="list-disc mx-12 grid gap-2">
+        <li>Conducted a knowledge-sharing session for software engineers on integrating AI into software applications, covering key concepts such as Transformer architectures, LSTMs, and Reinforcement Learning with Human Feedback (RLHF).</li>
+      </ul>
+    </div>
+    <div class="mb-4">
+      <div class="font-semibold ml-6">Get started with web development using Visual Studio Code and GitHub Pages</div>
+      <ul class="list-disc mx-12 grid gap-2">
+        <li>Delivered an engaging session on web development using Visual Studio Code and GitHub Pages, guiding participants through the full-stack development workflow, including IDE usage, version control, and deployment practices.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Projects</div>
+  </div>
+
+  <div class="mb-10">
+    <div class="mb-4">
+      <div class="font-semibold">PolyVision: An end-to-end object detection pipeline on AWS for identifying plastic bags. <a href="#" class="text-blue-600 hover:underline">Source Code</a></div>
+      <ul class="list-disc mx-6 grid gap-2">
+        <li>Designed and implemented a scalable Object-Detection pipeline using SageMaker, Step Functions, and Lambda on AWS for batch image-based plastic detection.</li>
+      </ul>
+    </div>
+    <div class="mb-4">
+      <div class="font-semibold">LameLines: A platform to make people laugh. <a href="#" class="text-blue-600 hover:underline">Source Code</a></div>
+      <ul class="list-disc mx-6 grid gap-2">
+        <li>Built a dockerized joke-sharing platform in Go with PostgreSQL and Redis. Features include user authentication, email verification, joke sharing, comments, user following, and production-grade practices.</li>
+      </ul>
+    </div>
+    <div class="mb-4">
+      <div class="font-semibold">Jatra: A travel solution with hotel, transport, restaurant suggestions, AI blogging and photo search. <a href="#" class="text-blue-600 hover:underline">Source Code</a></div>
+      <ul class="list-disc mx-6 grid gap-2">
+        <li>Developed the AI-powered blog generation using Claude 3.5 Sonnet, image captioning with Claude 3 Opus, RAG-based image search with Pinecone Vector DB, and text embeddings with Voyage AI.</li>
+      </ul>
+    </div>
+    <div class="mb-4">
+      <div class="font-semibold">Software Fault Prediction System: A machine learning approach to detect software faults. <a href="#" class="text-blue-600 hover:underline">Source Code</a></div>
+      <ul class="list-disc mx-6 grid gap-2">
+        <li>Implemented 6 ML models on 3 defect datasets and gained a significant classification performance of 98-100% using SVM.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Technical Skills</div>
+  </div>
+
+  <div class="grid gap-2 mb-10">
+    <div><span class="font-semibold">Languages:</span> Go, Python, Java, C++, JavaScript</div>
+    <div><span class="font-semibold">Backend:</span> FastAPI, Django, Node.js, Express.js</div>
+    <div><span class="font-semibold">Frontend:</span> React, HTML, CSS, Bootstrap</div>
+    <div><span class="font-semibold">Databases:</span> PostgreSQL, MySQL, Oracle DB, MongoDB, Pinecone, Redis</div>
+    <div><span class="font-semibold">ML Technologies:</span> Numpy, Pandas, Matplotlib, Seaborn, PyTorch, Tensorflow, Amazon SageMaker</div>
+    <div><span class="font-semibold">Developer Tools:</span> Postman, VS Code, Git and GitHub, Selenium, JMeter, AWS, Docker</div>
+  </div>
 </BaseLayout>
