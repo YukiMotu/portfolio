@@ -1,0 +1,92 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const publications = [
+  {
+    title: "Squeeze-Aware-YOLO: Early Channel Recalibration and Multi-Scale Fusion for Real-Time Traffic Sign Detection",
+    venue: "28th International Conference on Digital Image Computing: Techniques and Applications (DICTA 2026). (Accepted)",
+    links: [],
+  },
+  {
+    title: "BanglaKontho: Closing the Long-Form Gap in Bangla Text-to-Speech",
+    venue: "29th International Conference of Oriental COCOSDA. (Accepted)",
+    links: [{ label: "arXiv", url: "https://arxiv.org/abs/2609.29146" }],
+  },
+  {
+    title: "BanglaTurn: A Benchmark and Whisper-Based Model for End-of-Turn Detection in Bangla Speech",
+    venue: "29th International Conference of Oriental COCOSDA. (Accepted)",
+    links: [{ label: "arXiv", url: "https://arxiv.org/abs/2609.29371" }],
+  },
+  {
+    title: "Structure Before Sampling: Community-Aware Core-Set Selection for Data-Efficient Text-to-Speech",
+    venue: "arXiv preprint, 2026",
+    links: [{ label: "arXiv", url: "https://arxiv.org/abs/2609.24275" }],
+  },
+  {
+    title: "Maximizing ChatGPT for Education: Strategies for Enhanced Learning Experiences",
+    venue: "2026 2nd International Conference on Human-AI Interaction and Experience",
+    links: [
+      {
+        label: "Google Scholar",
+        url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=geP1QRgAAAAJ&citation_for_view=geP1QRgAAAAJ:d1gkVwhDpl0C",
+      },
+    ],
+  },
+  {
+    title: "PruneFedAD: Federated Learning with Structured Pruning for Low-Resource Alzheimer's Disease Detection",
+    venue: "2025 International Conference on Decision Aid Sciences and Applications (DASA'25)",
+    links: [
+      {
+        label: "Google Scholar",
+        url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=geP1QRgAAAAJ&citation_for_view=geP1QRgAAAAJ:u-x6o8ySG0sC",
+      },
+    ],
+  },
+  {
+    title: "LeafLiteNet: A Computationally Frugal Interpretable Neural Architecture Under Controlled and Uncontrolled Environmental Conditions",
+    venue: "Neural Computing and Applications (Springer), 2025. (Under Review)",
+    links: [],
+  },
+  {
+    title: "A Survey to Understand the experience of ChatGPT Usage among Engineering University Students in Bangladesh",
+    venue: "Technium: Romanian Journal of Applied Sciences and Technology (ISSN: 2668-778X), 2023",
+    links: [{ label: "DOI", url: "https://doi.org/10.47577/technium.v15i.9660" }],
+  },
+];
+---
+
+<BaseLayout title="Publications" sideBarActiveItemID="publications">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Publications</div>
+  </div>
+
+  <div class="mb-8">
+    <a
+      class="btn btn-sm"
+      href="https://scholar.google.com/citations?user=geP1QRgAAAAJ&hl=en"
+      target="_blank"
+      rel="noopener noreferrer">Google Scholar profile</a
+    >
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-4">
+    {
+      publications.map((pub) => (
+        <li>
+          <strong>{pub.title}</strong>
+          <br />
+          <em>{pub.venue}</em>
+          {pub.links.length > 0 && (
+            <div class="mt-1 flex flex-wrap gap-3">
+              {pub.links.map((link) => (
+                <a class="link link-primary text-sm" href={link.url} target="_blank" rel="noopener noreferrer">
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
