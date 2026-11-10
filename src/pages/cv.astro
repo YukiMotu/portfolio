@@ -9,7 +9,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-10 text-justify">
-    Machine Learning Engineer and applied researcher with 10 papers, 8 as first author (6 accepted or published, 4 under
+    Machine Learning Engineer and applied researcher with 10 papers, 8 as first author (7 accepted or published, 3 under
     review) in speech, computer vision and efficient ML. Takes models from research to production: runs self-hosted LLM
     serving on in-house GPUs, builds speech systems (TTS, ASR, end-of-turn detection) for low-resource languages, and
     designs lightweight models for real-time and resource-constrained deployment.
@@ -43,7 +43,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       <ul class="list-disc ml-4">
         <li>Set up and maintain production-grade serving of self-hosted Gemma 4 models on in-house GPU servers using vLLM and SGLang, replacing external LLM API calls with local LLMs.</li>
         <li>Built a reverse-proxy gateway in front of the self-hosted LLMs that inspects request content, validates API keys, enforces rate limits, rotates TLS certificates automatically, and routes each request to the right model; monitored it with Prometheus and Grafana.</li>
-        <li>Applied graph community detection to select community-aware core-sets for data-efficient TTS training (Structure Before Sampling, under review at ALTA 2026).</li>
+        <li>Applied graph community detection to select community-aware core-sets for data-efficient TTS training (Structure Before Sampling, accepted at ALTA 2026).</li>
         <li>Built and trained a custom Bangla TTS model on an in-house curated dataset (BanglaKontho, O-COCOSDA 2026).</li>
         <li>Developed a Bangla end-of-turn detection model for a real-time voice chatbot (BanglaTurn, O-COCOSDA 2026).</li>
         <li>Trained multiple Automatic Speech Recognition (ASR) models, including Whisper and NVIDIA NeMo, for the Nepali language.</li>
@@ -120,6 +120,11 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       <a class="link link-primary text-sm" href="https://arxiv.org/abs/2609.29371" target="_blank" rel="noopener noreferrer">arXiv</a>
     </li>
     <li>
+      <strong>Structure Before Sampling: Community-Aware Core-Set Selection for Data-Efficient Text-to-Speech</strong><br/>
+      <em>Australasian Language Technology Association Workshop (ALTA 2026). &ndash; First author</em><br/>
+      <a class="link link-primary text-sm" href="https://arxiv.org/abs/2609.24275" target="_blank" rel="noopener noreferrer">arXiv</a>
+    </li>
+    <li>
       <strong>Maximizing ChatGPT for Education: Strategies for Enhanced Learning Experiences</strong><br/>
       <em>2026 2nd International Conference on Human-AI Interaction and Experience. &ndash; Second author</em><br/>
       <a class="link link-primary text-sm" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=geP1QRgAAAAJ&citation_for_view=geP1QRgAAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener noreferrer">Google Scholar</a>
@@ -146,11 +151,6 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <li>
       <strong>Not Hearing or Not Negating? Disentangling Negation Failures of Audio-Language Models in English and Bangla</strong><br/>
       <em>ACL Rolling Review (ARR), October 2026 cycle; to be committed to NAACL 2027. &ndash; First author</em>
-    </li>
-    <li>
-      <strong>Structure Before Sampling: Community-Aware Core-Set Selection for Data-Efficient Text-to-Speech</strong><br/>
-      <em>arXiv preprint, 2026. Australasian Language Technology Association Workshop (ALTA 2026). &ndash; First author</em><br/>
-      <a class="link link-primary text-sm" href="https://arxiv.org/abs/2609.24275" target="_blank" rel="noopener noreferrer">arXiv</a>
     </li>
     <li>
       <strong>LeafLiteNet: A Computationally Frugal Interpretable Neural Architecture Under Controlled and Uncontrolled Environmental Conditions</strong><br/>
